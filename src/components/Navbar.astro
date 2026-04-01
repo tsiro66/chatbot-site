@@ -9,13 +9,13 @@ const navLinks = [
 ];
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 px-6 py-4 border-b border-neutral-200">
+<header class="fixed top-0 left-0 right-0 z-50 px-6 py-3 border-b border-neutral-200 bg-white">
   <nav class="max-w-6xl mx-auto flex items-center justify-between">
 
     <!-- Logo -->
     <a href="/" class="flex items-center gap-2 group">
       <Icon name="moon" size={20}/>
-      <span class="text-2xl font-bold tracking-tight text-neutral-950">
+      <span class="text-xl font-bold tracking-tight text-neutral-950">
         Lunar AI
       </span>
     </a>
@@ -26,7 +26,7 @@ const navLinks = [
         <li>
           <a
             href={link.href}
-            class="text-xl transition-colors duration-150"
+            class="transition-colors duration-150"
           >
             {link.label}
           </a>

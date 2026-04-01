@@ -158,7 +158,7 @@ export default function ShowcaseChat(): ReactElement {
   }, []);
 
   return (
-    <div className="flex flex-col h-130 w-5xl mx-auto bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm">
+    <div className="flex flex-col h-100 w-4xl mx-auto bg-white border border-neutral-200 rounded-2xl overflow-hidden shadow-sm">
       
       {/* Header */}
       <header className="flex items-center gap-3 px-4 py-3 border-b border-neutral-200 bg-white">
