@@ -1,0 +1,31 @@
+---
+import Button from '../components/Button.astro';
+import Chat from './Chat';
+---
+
+<section class="flex flex-col items-center justify-center min-h-screen text-center px-6 pt-20">
+  <h1 class="text-6xl md:text-7xl font-black tracking-tight leading-[1.05] max-w-6xl text-neutral-950">
+    ΑΙ βοηθός για την επιχείρηση σου,
+    <br /> βάλτον να δουλέυει για σένα.
+  </h1>
+
+  <p class="mt-6 text-base text-neutral-500 max-w-sm leading-relaxed">
+    Η δύναμη της τεχνητής νοημοσύνης στα χέρια σου.
+    <br />
+    Αυξήστε την παραγωγικότητα και βελτιώστε την εξυπηρέτηση πελατών.
+  </p>
+
+  <div class="mt-10 flex items-center gap-4">
+    <Button href="/quote" variant="primary">
+      Πάρε προσφορά
+    </Button>
+    
+    <Button href="/demo" variant="secondary">
+      Δοκιμασέ το
+    </Button>
+
+  </div>
+  <section class="flex items-center justify-center text-center p-10">
+    <Chat client:load />
+  </section>
+</section>

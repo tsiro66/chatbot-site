@@ -1,0 +1,45 @@
+---
+import Button from "./Button.astro";
+import { Icon } from 'astro-icon/components';
+
+const navLinks = [
+  { label: "Υπηρεσίες", href: "#" },
+  { label: "Πώς λειτουργεί", href: "#" },
+  { label: "Φόρμα Επικοινωνίας", href: "#" },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 px-6 py-4 border-b border-neutral-200">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 group">
+      <Icon name="moon" size={20}/>
+      <span class="text-2xl font-bold tracking-tight text-neutral-950">
+        Lunar AI
+      </span>
+    </a>
+
+    <!-- Nav links — hidden on mobile -->
+    <ul class="hidden md:flex items-center gap-8">
+      {navLinks.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="text-xl transition-colors duration-150"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- CTA -->
+    <div class="flex items-center">
+        <Button variant="nav">
+            Πάρε μας τηλέφωνο
+        </Button>
+    </div>
+
+  </nav>
+</header>

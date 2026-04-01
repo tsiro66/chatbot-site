@@ -1,0 +1,27 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import { Font } from "astro:assets";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/moon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <Font cssVariable="--font-google" preload />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <slot /> </main>
+  </body>
+</html>
